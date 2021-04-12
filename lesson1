@@ -1,0 +1,43 @@
+#DC01
+###odkaz: https://kodim.cz/czechitas/python-data/zaklady-programovani/hodnoty-promenne-funkce/#exc-prumer
+
+##Úroky
+u=0.024
+vklad = 1000000
+l=10
+
+nasporeno = vklad * (1+u)**l
+
+##Délka filmu
+total_min = 223
+
+# Hodiny pomocí celočíselného dělení // (floor division)
+h = total_min // 60
+
+# Zbývající minuty pomocí zbytku % (division reminder)
+min = total_min % 60
+
+# čas jako řetězec (string)
+cas_string = "{}:{}".format(h, min)
+
+print(cas_string) 
+
+
+##Průměrné teploty
+#TBD
+
+
+##Průměr
+s = [1, 2, 4, 1, 6, 0,10,1] #seznam (list) jakékoliv délky
+mean = sum(s)/len(s)
+
+##Střed seznamu
+def NajdiStred(in_list):
+     stred = float(len(in_list))/2   #float pro umožneni desetinných míst
+     if stred % 2 != 0:   #if else jako ošetření sudeho nebo licheho počtu položek v seznamu
+        return in_list[int(stred + .5)]
+     else:
+         return (in_list[int(stred)], in_list[int(stred-1)])
+
+muj_list = [1,3,4,6,8,0,2,4,6,7]
+NajdiStred(muj_list)
