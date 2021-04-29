@@ -11,11 +11,6 @@ plates = {"4A2 3000": "František Novák",
   "2A5 2241": "Jan Král"}
 
 
-
-značky = list(plates.keys()) #převedu dic na list, aby bylo možné použít index
-print(značky)
-
-
 for značky, jmeno in plates.items():
     if značky[1] == 'P':
         print(jmeno)
