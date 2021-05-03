@@ -3,19 +3,21 @@
 
 rc = int(input("Zadej své rodné číslo (bez lomítka): "))
 
-
 def monthOfBirth(rc):
     rc_str = str(rc)
-    hlaska = (f"Rodné číslo bylo zadáno chybně.")
+    mesic = int(rc_str[2:4])
 
-    if int(rc_str[2:4]) <= 12:
-        return int(rc_str[2:4])
-    elif int(rc_str[2:4]) <= 50:
-        return(hlaska)
-    elif int(rc_str[2:4]) <= 62:
-        return int(rc_str[2:4]) - 50
-    elif int(rc_str[2:4]) > 62:
-        return(hlaska)
+    hlaska = "Rodné číslo bylo zadáno chybně."
+
+
+    if mesic <= 12:
+        return mesic
+    elif mesic <= 50:
+        return hlaska
+    elif mesic <= 62:
+        return mesic - 50
+    elif mesic > 62:
+        return hlaska
 
 print(monthOfBirth(rc))
 
