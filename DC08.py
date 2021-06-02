@@ -23,11 +23,17 @@ print( round( sum( [ float(x[-1].split()[0]) for x in recept['ingredience'] ] ) 
 ## Jednotlivé kroky
 # 1) Vytvoření seznamu s informací o ceně
 ceny = [ingredience[-1] for ingredience in recept['ingredience']]
+
 # 2) Převedení ceny na číslo
 # Nejdříve jdem rozkouskovala pomocí bílých znaků a pomocí indexace jsem vybrala první hodnotu
 # Následně jsem převedla na číslo
 cena_cislo = [cena.split()[0] for cena in ceny]
-celkova_cena = [float(cena )for cena in cena_cislo]
+celkova_cena = [float(cena)for cena in cena_cislo]
+
+#alternativou je použití funkce replace
+cena_cislo = [cena.replace(' kč','') for cena in ceny]
+celkova_cena = [float(cena)for cena in cena_cislo]
+
 
 # 3) Sečíst a zaokrouhlit
 print(f"Celé jídlo bude stát: { round( sum(celkova_cena))} Kč")
