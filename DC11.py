@@ -13,7 +13,7 @@ import re
 
 mujRegex = re.compile(r"((http|https):((//)|(\\\\))+([\w\d:#@%/;$()~_?\+-=\\\.&](#!)?)*)")
 #((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*
-#Tohle fungovalo na regexp101 a je to obecnejsi
+#Tohle fungovalo na regexp101 a je to obecnejsi, bohužel se mi to nepodařilo aplikovat
 vystup = mujRegex.findall(emailSRadami) 
 print([v[0] for v in vystup])
 
